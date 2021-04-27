@@ -3,9 +3,9 @@
 //dati dell'utente
 var etaUtente = prompt("Quanti anni hai?");
 var chilometriUtente = prompt("Quanti chilometri vuoi percorrere?");
-var maggioreEta = 18;
 
-//parametri per il calcolo dei prodotti
+//parametri per il calcolo del prezzo del biglietto
+var maggioreEta = 18;
 var prezzoChilometro = 0.21;
 var scontoMinorenni = 40;
 var scontoAnziani = 65;
