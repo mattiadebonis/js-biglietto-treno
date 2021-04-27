@@ -22,4 +22,20 @@ if (etaUtente < 18){
 }
 
 //restituisci prezzo con massimo due decimali 
-document.getElementById('prezzo_biglietto').innerHTML = prezzoBiglietto.toFixed(2)
+
+if (isNaN(prezzoBiglietto) == false){
+    document.getElementById('prezzo_biglietto').innerHTML = prezzoBiglietto.toFixed(2)
+
+    //eta non inserita correttamente
+    if(isNaN(etaUtente) == true){
+        document.getElementById('eta_utente').innerHTML = "Età non inserita correttamente. Impossibile calcolare eventuali sconti"
+    }
+}else{
+    document.getElementById('prezzo_biglietto').innerHTML = "impossibile calcolare il prezzo del biglietto"
+    
+    //chilometri inseriti non correttamente
+    if(isNaN(chilometriUtente) == true){
+        document.getElementById('chilometri_utente').innerHTML = "Chilometri non inseriti correttamente."
+    }
+    
+}
