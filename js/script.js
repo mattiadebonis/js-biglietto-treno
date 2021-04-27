@@ -10,15 +10,16 @@ var maggioreEta = 18
 var prezzoChilometro = 0.21
 var scontoMinori = 0.2
 var scontoAnziani = 0.4
+var scontoUtente = 0
 
 //calcolare il prezzo del biglietto (0,21 al chilometro)
 var prezzoBiglietto = chilometriUtente*prezzoChilometro
 
 //se minorenni applicare sconto del 20% se over 65 del 40%
 if (etaUtente < 18){
-    prezzoBiglietto = prezzoBiglietto*scontoMinori
+    prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto*scontoMinori)
 }else if (etaUtente>65){
-    prezzoBiglietto = prezzoBiglietto*scontoAnziani
+    prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto*scontoAnziani)
 }
 
 //restituisci prezzo con massimo due decimali 
